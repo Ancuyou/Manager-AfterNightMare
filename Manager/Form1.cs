@@ -44,6 +44,9 @@ namespace Manager
         {
             Reset_btn();
             Select_btn(btnProduct);
+            ucProduct uc_pro = new ucProduct();
+            pnlPage.Controls.Clear();
+            pnlPage.Controls.Add(uc_pro);
         }
 
         private void btnIncome_Click(object sender, EventArgs e)
@@ -59,9 +62,9 @@ namespace Manager
         {
             Reset_btn();
             Select_btn(btnStaff);
-            ucStaff uc_p = new ucStaff();
+            ucStaff uc_s = new ucStaff();
             pnlPage.Controls.Clear();
-            pnlPage.Controls.Add(uc_p);
+            pnlPage.Controls.Add(uc_s);
         }
 
         private void btnFacility_Click(object sender, EventArgs e)

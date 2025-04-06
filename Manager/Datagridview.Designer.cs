@@ -37,7 +37,7 @@
             // 
             this.dgvUnderStock.AllowUserToResizeRows = false;
             this.dgvUnderStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUnderStock.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.dgvUnderStock.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
             this.dgvUnderStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUnderStock.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvUnderStock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -51,13 +51,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUnderStock.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvUnderStock.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
-            this.dgvUnderStock.Location = new System.Drawing.Point(-12, 0);
+            this.dgvUnderStock.Location = new System.Drawing.Point(0, 0);
             this.dgvUnderStock.Name = "dgvUnderStock";
             this.dgvUnderStock.RowHeadersVisible = false;
             this.dgvUnderStock.RowHeadersWidth = 62;
             this.dgvUnderStock.RowTemplate.Height = 28;
             this.dgvUnderStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUnderStock.Size = new System.Drawing.Size(415, 266);
+            this.dgvUnderStock.Size = new System.Drawing.Size(391, 266);
             this.dgvUnderStock.TabIndex = 3;
             // 
             // Datagridview

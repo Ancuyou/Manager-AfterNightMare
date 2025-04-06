@@ -32,8 +32,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbpnlTop = new System.Windows.Forms.TableLayoutPanel();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.elipseUcStaff = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlEditProduct = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlEditProductTop = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblID = new System.Windows.Forms.Label();
+            this.btnAccept = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.pnlEditProductFill = new Guna.UI2.WinForms.Guna2Panel();
             this.tblEditProduct = new System.Windows.Forms.TableLayoutPanel();
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
@@ -41,7 +50,10 @@
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtLastName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnImageChange = new Guna.UI2.WinForms.Guna2Button();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLastName = new System.Windows.Forms.Label();
@@ -56,8 +68,6 @@
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblSalary = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
-            this.pnlEditProductTop = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblID = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dgvStaff = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,25 +80,16 @@
             this.elipsePnlEditProductTop = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.elipsePnlEditProductFill = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.elipseDgvStaff = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnImageChange = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAccept = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.tbpnlTop.SuspendLayout();
             this.pnlEditProduct.SuspendLayout();
+            this.pnlEditProductTop.SuspendLayout();
             this.pnlEditProductFill.SuspendLayout();
             this.tblEditProduct.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            this.pnlEditProductTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.pnlGrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // tbpnlTop
@@ -106,13 +107,110 @@
             this.tbpnlTop.Controls.Add(this.btnDelete, 2, 0);
             this.tbpnlTop.Controls.Add(this.btnEdit, 1, 0);
             this.tbpnlTop.Controls.Add(this.btnAdd, 0, 0);
+            this.tbpnlTop.Controls.Add(this.label1, 5, 0);
             this.tbpnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbpnlTop.Location = new System.Drawing.Point(0, 0);
             this.tbpnlTop.Name = "tbpnlTop";
             this.tbpnlTop.RowCount = 1;
             this.tbpnlTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbpnlTop.Size = new System.Drawing.Size(1100, 60);
+            this.tbpnlTop.Size = new System.Drawing.Size(990, 60);
             this.tbpnlTop.TabIndex = 0;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BorderRadius = 12;
+            this.btnPrint.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrint.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Image = global::Manager.Properties.Resources.printer_3022251;
+            this.btnPrint.Location = new System.Drawing.Point(360, 0);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(87, 60);
+            this.btnPrint.TabIndex = 5;
+            this.btnPrint.Text = "Print";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BorderRadius = 12;
+            this.btnRefresh.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Image = global::Manager.Properties.Resources.refresh_10025481;
+            this.btnRefresh.Location = new System.Drawing.Point(270, 0);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(87, 60);
+            this.btnRefresh.TabIndex = 4;
+            this.btnRefresh.Text = "Refresh";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BorderRadius = 12;
+            this.btnDelete.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = global::Manager.Properties.Resources.trash_9915683;
+            this.btnDelete.Location = new System.Drawing.Point(180, 0);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(87, 60);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BorderRadius = 12;
+            this.btnEdit.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Image = global::Manager.Properties.Resources.write_7879263;
+            this.btnEdit.Location = new System.Drawing.Point(90, 0);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(87, 60);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Edit";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BorderRadius = 12;
+            this.btnAdd.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = global::Manager.Properties.Resources.new_page_7879261;
+            this.btnAdd.Location = new System.Drawing.Point(0, 0);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(87, 60);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // elipseUcStaff
             // 
@@ -121,17 +219,87 @@
             // 
             // pnlEditProduct
             // 
-            this.pnlEditProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.pnlEditProduct.BorderRadius = 12;
+            this.pnlEditProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
+            this.pnlEditProduct.BorderRadius = 30;
             this.pnlEditProduct.BorderThickness = 1;
             this.pnlEditProduct.Controls.Add(this.pnlEditProductTop);
             this.pnlEditProduct.Controls.Add(this.pnlEditProductFill);
             this.pnlEditProduct.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlEditProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
-            this.pnlEditProduct.Location = new System.Drawing.Point(630, 60);
+            this.pnlEditProduct.Location = new System.Drawing.Point(520, 60);
             this.pnlEditProduct.Name = "pnlEditProduct";
-            this.pnlEditProduct.Size = new System.Drawing.Size(470, 728);
+            this.pnlEditProduct.Size = new System.Drawing.Size(470, 570);
             this.pnlEditProduct.TabIndex = 1;
+            // 
+            // pnlEditProductTop
+            // 
+            this.pnlEditProductTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.pnlEditProductTop.BorderRadius = 30;
+            this.pnlEditProductTop.Controls.Add(this.lblID);
+            this.pnlEditProductTop.Controls.Add(this.btnAccept);
+            this.pnlEditProductTop.Controls.Add(this.btnCancel);
+            this.pnlEditProductTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEditProductTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlEditProductTop.Name = "pnlEditProductTop";
+            this.pnlEditProductTop.Size = new System.Drawing.Size(470, 62);
+            this.pnlEditProductTop.TabIndex = 2;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblID.ForeColor = System.Drawing.Color.White;
+            this.lblID.Location = new System.Drawing.Point(79, 20);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(33, 28);
+            this.lblID.TabIndex = 5;
+            this.lblID.Text = "ID";
+            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnAccept
+            // 
+            this.btnAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnAccept.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnAccept.BorderRadius = 12;
+            this.btnAccept.BorderThickness = 2;
+            this.btnAccept.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAccept.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAccept.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAccept.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAccept.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAccept.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnAccept.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btnAccept.ForeColor = System.Drawing.Color.White;
+            this.btnAccept.Image = global::Manager.Properties.Resources.check_11601271;
+            this.btnAccept.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAccept.Location = new System.Drawing.Point(296, 0);
+            this.btnAccept.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(87, 62);
+            this.btnAccept.TabIndex = 4;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnCancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            this.btnCancel.BorderRadius = 12;
+            this.btnCancel.BorderThickness = 2;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Image = global::Manager.Properties.Resources.cross_mark_11601293;
+            this.btnCancel.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnCancel.Location = new System.Drawing.Point(383, 0);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(87, 62);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // pnlEditProductFill
             // 
@@ -143,7 +311,7 @@
             this.pnlEditProductFill.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlEditProductFill.Location = new System.Drawing.Point(0, 65);
             this.pnlEditProductFill.Name = "pnlEditProductFill";
-            this.pnlEditProductFill.Size = new System.Drawing.Size(470, 663);
+            this.pnlEditProductFill.Size = new System.Drawing.Size(470, 505);
             this.pnlEditProductFill.TabIndex = 3;
             // 
             // tblEditProduct
@@ -201,7 +369,7 @@
             this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tblEditProduct.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblEditProduct.Size = new System.Drawing.Size(450, 1067);
+            this.tblEditProduct.Size = new System.Drawing.Size(467, 1085);
             this.tblEditProduct.TabIndex = 2;
             // 
             // txtDescription
@@ -224,7 +392,7 @@
             this.txtDescription.PlaceholderText = "";
             this.tblEditProduct.SetRowSpan(this.txtDescription, 2);
             this.txtDescription.SelectedText = "";
-            this.txtDescription.Size = new System.Drawing.Size(442, 157);
+            this.txtDescription.Size = new System.Drawing.Size(459, 175);
             this.txtDescription.TabIndex = 22;
             this.txtDescription.Leave += new System.EventHandler(this.txtDescription_Leave);
             this.txtDescription.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtDescription_MouseClick);
@@ -323,17 +491,68 @@
             this.txtLastName.Leave += new System.EventHandler(this.txtLastName_Leave);
             this.txtLastName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtLastName_MouseClick);
             // 
+            // pbAvatar
+            // 
+            this.pbAvatar.BorderRadius = 20;
+            this.pbAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbAvatar.ImageRotate = 0F;
+            this.pbAvatar.Location = new System.Drawing.Point(158, 3);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.Padding = new System.Windows.Forms.Padding(4);
+            this.tblEditProduct.SetRowSpan(this.pbAvatar, 2);
+            this.pbAvatar.Size = new System.Drawing.Size(149, 84);
+            this.pbAvatar.TabIndex = 0;
+            this.pbAvatar.TabStop = false;
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
             this.guna2Panel1.Controls.Add(this.guna2Button5);
             this.guna2Panel1.Controls.Add(this.btnImageChange);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Location = new System.Drawing.Point(149, 90);
+            this.guna2Panel1.Location = new System.Drawing.Point(155, 90);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(150, 29);
+            this.guna2Panel1.Size = new System.Drawing.Size(155, 29);
             this.guna2Panel1.TabIndex = 3;
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.guna2Button5.BorderRadius = 12;
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(162)))), ((int)(((byte)(183)))));
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.guna2Button5.ForeColor = System.Drawing.Color.White;
+            this.guna2Button5.Image = global::Manager.Properties.Resources.image_13406883;
+            this.guna2Button5.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button5.Location = new System.Drawing.Point(90, 0);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.Size = new System.Drawing.Size(65, 29);
+            this.guna2Button5.TabIndex = 3;
+            // 
+            // btnImageChange
+            // 
+            this.btnImageChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            this.btnImageChange.BorderRadius = 12;
+            this.btnImageChange.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnImageChange.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnImageChange.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnImageChange.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnImageChange.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnImageChange.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(162)))), ((int)(((byte)(183)))));
+            this.btnImageChange.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btnImageChange.ForeColor = System.Drawing.Color.White;
+            this.btnImageChange.Image = global::Manager.Properties.Resources.image_13406897;
+            this.btnImageChange.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnImageChange.Location = new System.Drawing.Point(0, 0);
+            this.btnImageChange.Name = "btnImageChange";
+            this.btnImageChange.Size = new System.Drawing.Size(65, 29);
+            this.btnImageChange.TabIndex = 1;
             // 
             // lblFirstName
             // 
@@ -422,7 +641,7 @@
             this.lblGender.ForeColor = System.Drawing.Color.White;
             this.lblGender.Location = new System.Drawing.Point(3, 390);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(143, 60);
+            this.lblGender.Size = new System.Drawing.Size(149, 60);
             this.lblGender.TabIndex = 10;
             this.lblGender.Text = "Gender";
             this.lblGender.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -438,9 +657,9 @@
             this.rdbMale.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rdbMale.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.rdbMale.ForeColor = System.Drawing.Color.White;
-            this.rdbMale.Location = new System.Drawing.Point(152, 393);
+            this.rdbMale.Location = new System.Drawing.Point(158, 393);
             this.rdbMale.Name = "rdbMale";
-            this.rdbMale.Size = new System.Drawing.Size(144, 54);
+            this.rdbMale.Size = new System.Drawing.Size(149, 54);
             this.rdbMale.TabIndex = 11;
             this.rdbMale.Text = "Male";
             this.rdbMale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -459,9 +678,9 @@
             this.guna2RadioButton1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2RadioButton1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2RadioButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2RadioButton1.Location = new System.Drawing.Point(302, 393);
+            this.guna2RadioButton1.Location = new System.Drawing.Point(313, 393);
             this.guna2RadioButton1.Name = "guna2RadioButton1";
-            this.guna2RadioButton1.Size = new System.Drawing.Size(145, 54);
+            this.guna2RadioButton1.Size = new System.Drawing.Size(151, 54);
             this.guna2RadioButton1.TabIndex = 12;
             this.guna2RadioButton1.Text = "Female";
             this.guna2RadioButton1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -539,31 +758,6 @@
             this.lblDescription.TabIndex = 19;
             this.lblDescription.Text = "Description";
             // 
-            // pnlEditProductTop
-            // 
-            this.pnlEditProductTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.pnlEditProductTop.BorderRadius = 30;
-            this.pnlEditProductTop.Controls.Add(this.lblID);
-            this.pnlEditProductTop.Controls.Add(this.btnAccept);
-            this.pnlEditProductTop.Controls.Add(this.btnCancel);
-            this.pnlEditProductTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEditProductTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlEditProductTop.Name = "pnlEditProductTop";
-            this.pnlEditProductTop.Size = new System.Drawing.Size(470, 62);
-            this.pnlEditProductTop.TabIndex = 2;
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(79, 20);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(33, 28);
-            this.lblID.TabIndex = 5;
-            this.lblID.Text = "ID";
-            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // imageList1
             // 
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
@@ -582,7 +776,7 @@
             this.dgvStaff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(122)))), ((int)(((byte)(123)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -615,7 +809,7 @@
             this.dgvStaff.RowHeadersWidth = 35;
             this.dgvStaff.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStaff.Size = new System.Drawing.Size(630, 728);
+            this.dgvStaff.Size = new System.Drawing.Size(520, 570);
             this.dgvStaff.TabIndex = 2;
             // 
             // ID
@@ -668,7 +862,7 @@
             this.pnlGrid.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlGrid.Location = new System.Drawing.Point(0, 60);
             this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(630, 728);
+            this.pnlGrid.Size = new System.Drawing.Size(520, 570);
             this.pnlGrid.TabIndex = 3;
             // 
             // timer
@@ -690,197 +884,17 @@
             this.elipseDgvStaff.BorderRadius = 20;
             this.elipseDgvStaff.TargetControl = this.dgvStaff;
             // 
-            // pbAvatar
+            // label1
             // 
-            this.pbAvatar.BorderRadius = 20;
-            this.pbAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbAvatar.ImageRotate = 0F;
-            this.pbAvatar.Location = new System.Drawing.Point(152, 3);
-            this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.Padding = new System.Windows.Forms.Padding(4);
-            this.tblEditProduct.SetRowSpan(this.pbAvatar, 2);
-            this.pbAvatar.Size = new System.Drawing.Size(144, 84);
-            this.pbAvatar.TabIndex = 0;
-            this.pbAvatar.TabStop = false;
-            // 
-            // guna2Button5
-            // 
-            this.guna2Button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.guna2Button5.BorderRadius = 12;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(162)))), ((int)(((byte)(183)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Image = global::Manager.Properties.Resources.image_13406883;
-            this.guna2Button5.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button5.Location = new System.Drawing.Point(85, 0);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(65, 29);
-            this.guna2Button5.TabIndex = 3;
-            // 
-            // btnImageChange
-            // 
-            this.btnImageChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.btnImageChange.BorderRadius = 12;
-            this.btnImageChange.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnImageChange.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnImageChange.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnImageChange.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnImageChange.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnImageChange.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(162)))), ((int)(((byte)(183)))));
-            this.btnImageChange.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnImageChange.ForeColor = System.Drawing.Color.White;
-            this.btnImageChange.Image = global::Manager.Properties.Resources.image_13406897;
-            this.btnImageChange.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnImageChange.Location = new System.Drawing.Point(0, 0);
-            this.btnImageChange.Name = "btnImageChange";
-            this.btnImageChange.Size = new System.Drawing.Size(65, 29);
-            this.btnImageChange.TabIndex = 1;
-            // 
-            // btnAccept
-            // 
-            this.btnAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.btnAccept.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnAccept.BorderRadius = 12;
-            this.btnAccept.BorderThickness = 2;
-            this.btnAccept.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAccept.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAccept.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAccept.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAccept.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAccept.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.btnAccept.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnAccept.ForeColor = System.Drawing.Color.White;
-            this.btnAccept.Image = global::Manager.Properties.Resources.check_11601271;
-            this.btnAccept.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAccept.Location = new System.Drawing.Point(296, 0);
-            this.btnAccept.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(87, 62);
-            this.btnAccept.TabIndex = 4;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.btnCancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            this.btnCancel.BorderRadius = 12;
-            this.btnCancel.BorderThickness = 2;
-            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = global::Manager.Properties.Resources.cross_mark_11601293;
-            this.btnCancel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCancel.Location = new System.Drawing.Point(383, 0);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(87, 62);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BorderRadius = 12;
-            this.btnPrint.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPrint.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Image = global::Manager.Properties.Resources.printer_3022251;
-            this.btnPrint.Location = new System.Drawing.Point(360, 0);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(87, 60);
-            this.btnPrint.TabIndex = 5;
-            this.btnPrint.Text = "Print";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BorderRadius = 12;
-            this.btnRefresh.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Image = global::Manager.Properties.Resources.refresh_10025481;
-            this.btnRefresh.Location = new System.Drawing.Point(270, 0);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(87, 60);
-            this.btnRefresh.TabIndex = 4;
-            this.btnRefresh.Text = "Refresh";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BorderRadius = 12;
-            this.btnDelete.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Image = global::Manager.Properties.Resources.trash_9915683;
-            this.btnDelete.Location = new System.Drawing.Point(180, 0);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(87, 60);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Delete";
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BorderRadius = 12;
-            this.btnEdit.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Image = global::Manager.Properties.Resources.write_7879263;
-            this.btnEdit.Location = new System.Drawing.Point(90, 0);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(87, 60);
-            this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Edit";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BorderRadius = 12;
-            this.btnAdd.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Image = global::Manager.Properties.Resources.new_page_7879261;
-            this.btnAdd.Location = new System.Drawing.Point(0, 0);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(87, 60);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("UTM Swiss 721 Black Condensed", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.Location = new System.Drawing.Point(613, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(213, 60);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Staff Together";
             // 
             // ucStaff
             // 
@@ -892,19 +906,20 @@
             this.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ucStaff";
-            this.Size = new System.Drawing.Size(1100, 788);
+            this.Size = new System.Drawing.Size(990, 630);
             this.Load += new System.EventHandler(this.ucStaff_Load);
             this.tbpnlTop.ResumeLayout(false);
+            this.tbpnlTop.PerformLayout();
             this.pnlEditProduct.ResumeLayout(false);
+            this.pnlEditProductTop.ResumeLayout(false);
+            this.pnlEditProductTop.PerformLayout();
             this.pnlEditProductFill.ResumeLayout(false);
             this.tblEditProduct.ResumeLayout(false);
             this.tblEditProduct.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            this.pnlEditProductTop.ResumeLayout(false);
-            this.pnlEditProductTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             this.pnlGrid.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -960,5 +975,6 @@
         private Guna.UI2.WinForms.Guna2Elipse elipsePnlEditProductTop;
         private Guna.UI2.WinForms.Guna2Elipse elipsePnlEditProductFill;
         private Guna.UI2.WinForms.Guna2Elipse elipseDgvStaff;
+        private System.Windows.Forms.Label label1;
     }
 }
