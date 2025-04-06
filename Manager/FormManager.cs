@@ -22,22 +22,22 @@ namespace Manager
             {
                 case "btnProduct": btn.ImageIndex = 1; break;
                 case "btnIncome": btn.ImageIndex = 3; break;
-                case "btnStaff": btn.ImageIndex = 5; break;
-                case "btnFacility": btn.ImageIndex = 7; break;
+                case "btnStaff": btn.ImageIndex = 7; break;
+                case "btnFacility": btn.ImageIndex = 5; break;
                 default: break;
             }
-            btn.BackColor = Color.FromArgb(17, 147, 255);
+            btn.BackColor = Color.FromArgb(205, 178, 175);
         }
         void Reset_btn()
         {
             foreach (var btn in TLB_menu.Controls.OfType<Button>())
             {
-                btn.BackColor = Color.FromArgb(17, 153, 248);
+                btn.BackColor = Color.FromArgb(255, 228, 225);
             }
             btnProduct.ImageIndex = 0;
             btnIncome.ImageIndex = 2;
-            btnStaff.ImageIndex = 4;
-            btnFacility.ImageIndex = 6;
+            btnStaff.ImageIndex = 6;
+            btnFacility.ImageIndex = 4;
         }
 
         private void btnProduct_Click(object sender, EventArgs e)

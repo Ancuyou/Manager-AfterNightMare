@@ -57,44 +57,44 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\DbConnection.cs" />
-    <Compile Include="Datagridview.cs">
+    <Compile Include="ExtraControl\Datagridview.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Datagridview.Designer.cs">
+    <Compile Include="ExtraControl\Datagridview.Designer.cs">
       <DependentUpon>Datagridview.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormManager.Designer.cs">
+      <DependentUpon>FormManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ucIncome.cs">
+    <Compile Include="ucIncome\ucIncome.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucIncome.Designer.cs">
+    <Compile Include="ucIncome\ucIncome.Designer.cs">
       <DependentUpon>ucIncome.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucIncomeLogic.cs" />
-    <Compile Include="ucProduct.cs">
+    <Compile Include="ucIncome\ucIncomeLogic.cs" />
+    <Compile Include="ucProduct\ucProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucProduct.Designer.cs">
+    <Compile Include="ucProduct\ucProduct.Designer.cs">
       <DependentUpon>ucProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucStaff.cs">
+    <Compile Include="ucStaff\ucStaff.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucStaff.Designer.cs">
+    <Compile Include="ucStaff\ucStaff.Designer.cs">
       <DependentUpon>ucStaff.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Datagridview.resx">
+    <EmbeddedResource Include="ExtraControl\Datagridview.resx">
       <DependentUpon>Datagridview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormManager.resx">
+      <DependentUpon>FormManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,13 +106,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ucIncome.resx">
+    <EmbeddedResource Include="ucIncome\ucIncome.resx">
       <DependentUpon>ucIncome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucProduct.resx">
+    <EmbeddedResource Include="ucProduct\ucProduct.resx">
       <DependentUpon>ucProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucStaff.resx">
+    <EmbeddedResource Include="ucStaff\ucStaff.resx">
       <DependentUpon>ucStaff.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
